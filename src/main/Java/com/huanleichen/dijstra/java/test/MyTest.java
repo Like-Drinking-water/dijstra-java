@@ -7,10 +7,12 @@ import java.util.Arrays;
 public class MyTest {
     public static void main(String[] args) {
         int[][] graph = {
-                        {0, 2, 5, 6},
-                        {2, 0, 1, 7},
-                        {1, 4, 0, 2},
-                        {2, 5, 3, 0}
+                        {0, 1, 12, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE},
+                        {Integer.MAX_VALUE, 0, 9, 3, Integer.MAX_VALUE, Integer.MAX_VALUE},
+                        {Integer.MAX_VALUE, Integer.MAX_VALUE, 0, Integer.MAX_VALUE, 5, Integer.MAX_VALUE},
+                        {Integer.MAX_VALUE, Integer.MAX_VALUE, 4, 0, 13, 15},
+                        {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 0, 4},
+                        {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, 0}
                     };
 
         FindPath findPath = new FindPath(graph);

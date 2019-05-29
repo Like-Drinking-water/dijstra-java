@@ -72,9 +72,11 @@ public class FindPath {
                 //如果v0到v的最短距离加上v到w的距离小于distance现在设置距离
                 //则将distance设置为v0到v的最短距离加上v到w的距离
                 //并修改路径为:v0到v的路径加上到w节点
-                if (!isShort[w] && (min + graph[v][w] < distance[w])) {
-                    distance[w] = min + graph[v][w];
-                    path[w] = path[v] + " -> " + w;
+                if (graph[v][w] < Integer.MAX_VALUE) {
+                    if (!isShort[w] && (min + graph[v][w] < distance[w])) {
+                        distance[w] = min + graph[v][w];
+                        path[w] = path[v] + " -> " + w;
+                    }
                 }
             }
         }
